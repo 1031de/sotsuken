@@ -10,11 +10,11 @@ with image1:
 with image2:
    image2 = Image.open('1124_s.jpg')
 
-dst = Image.new('RGB', (image1.width + image2.width, image1.height))
-dst.paste(image1, (0, 0))
-dst.paste(image2, (image1.width, 0))
+#dst = Image.new('RGB', (image1.width + image2.width, image1.height))
+#dst.paste(image1, (0, 0))
+#dst.paste(image2, (image1.width, 0))
 
-sl = st.slider('θ値', min_value=1,max_value=45)
+#sl = st.slider('θ値', min_value=1,max_value=45)
 
 if sl:
     height = image1.height
@@ -79,3 +79,5 @@ if sl:
     
     with image2:
         image2 = st.image(im2)
+
+sl = st.slider('θ値', min_value=1,max_value=45)
