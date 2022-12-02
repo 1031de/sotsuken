@@ -14,7 +14,7 @@ with image2:
 #dst.paste(image1, (0, 0))
 #dst.paste(image2, (image1.width, 0))
 
-#sl = st.slider('θ値', min_value=1,max_value=45)
+sl = st.slider('θ値', min_value=1,max_value=45)
 
 if sl:
     height = image1.height
@@ -60,8 +60,6 @@ if sl:
         method=Image.QUAD,
         data=tarl,
         resample=Image.BICUBIC,
-        #fill=1,
-        #fillcolor=None
     )
 
     im2 = image2.transform(
@@ -69,8 +67,8 @@ if sl:
         method=Image.QUAD,
         data=tarr,
         resample=Image.BICUBIC,
-        fill=1,
-        fillcolor=None
+        #fill=1,
+        #fillcolor=None
     )
 
     image1,image2 = st.columns(2) 
@@ -79,5 +77,3 @@ if sl:
     
     with image2:
         image2 = st.image(im2)
-
-sl = st.slider('θ値', min_value=1,max_value=45)
